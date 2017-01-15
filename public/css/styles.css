@@ -1,0 +1,43 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  font-family: Roboto;
+  font-size: 1em;
+}
+button {
+  font-size: 16px;
+  line-height: 1.4em;
+
+  border: none;
+  border-radius: 3px;
+
+  color: white;
+  background: #0D99FC;
+}
+#create_list{
+  width: 50%;
+margin-left: auto;
+margin-right: auto;
+background-color: rgba(220, 220, 220, 0.53);
+padding: 27px;
+margin-top: 50px;
+text-align: center;
+}
+.form-field-group{
+  padding: 10px;
+  margin: 10px;
+}
+
+.form-field-group > label{
+  width: 20%;
+}
+
+.form-field-group > input{
+  width: 80%;
+  padding: 10px;
+}
+
+.form-field-group > textarea{
+  width: 80%;
+  padding: 15px;
+}
