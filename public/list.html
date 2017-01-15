@@ -5,16 +5,14 @@
   <meta name="description" content="This is a basic TODO list made to demo basic frontend in pathahshala"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link href="/css/styles.css" rel="stylesheet"/>
+<link href="/css/styles.css" rel="stylesheet"/>
 </head>
 <body>
   <div class="container">
     <div class="row top_form">
       <div class="col-lg-2 hidden-xs hidden-sm"></div>
       <div class="col-lg-8 well">
-        <form id="create_list" action="/api/items" method="post">
+        <form id="create_item" action="/api/items" method="post">
           <div class="form-group">
         <label class="label label-primary">
           Task Name:
@@ -36,6 +34,11 @@
           <span class="glyphicon glyphicon-erase"></span>&nbsp;
           Reset
         </button>
+
+      </div>
+      <div id="result_area">
+        <div id="success_insert" class="alert alert-success" style="display:none;" role="alert">TODO created</div>
+        <div id ="failed_insert" class="alert alert-danger" style="display:none;" role="alert">Unable to create TODO</div>
       </div>
     </form>
       </div>
@@ -44,4 +47,8 @@
 
   </div>
 </body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src ="/js/scripts.js"></script>
 </html>

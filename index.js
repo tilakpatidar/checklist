@@ -19,6 +19,8 @@ var port     = process.env.PORT || 3000; // set our port
 
 var Item     = require('./app/models/item');
 
+
+
 // ROUTES FOR OUR API
 // =============================================================================
 
@@ -44,9 +46,15 @@ router.route('/items')
 	// create a bear (accessed at POST http://localhost:3000/items)
 	.post(function(req, res) {
     console.log(req.body);
-		var item = new Item(req.body.title, req.body.description);		// create a new instance of the Item model
-    Items[item.id] = item;
-    res.json({ message: 'Item created!' });
+		try{
+			var item = new Item(req.body.title, req.body.description);		// create a new instance of the Item model
+			Items[item.id] = item;
+			res.json({ message: 'Item created!' });
+		}catch(e){
+			res.status(404);
+			res.send();
+		}
+
 
 
 	})
