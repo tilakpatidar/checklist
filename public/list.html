@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>My Checklist</title>
+  <meta name="keywords" content="checklist, todo list"/>
+  <meta name="description" content="This is a basic TODO list made to demo basic frontend in pathahshala"/>
+</head>
+<body>
+  <div>
+    <form action="/api/items" method="post">
+    <label>
+      Task Name:
+      <input name="title" type="text" placeholder="Enter title for the task">
+    </label>
+    <label>
+      Task description:
+      <textarea name="description" rows="5" cols = "50" type="text" placeholder="Enter description of the task"></textarea>
+    </label>
+    <button type="submit">
+      Add Task
+    </button>
+    <button type="reset">
+      Reset
+    </button>
+</form>
+  </div>
+</body>
+</html>
