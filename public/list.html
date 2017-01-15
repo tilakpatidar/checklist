@@ -3,32 +3,45 @@
   <title>My Checklist</title>
   <meta name="keywords" content="checklist, todo list"/>
   <meta name="description" content="This is a basic TODO list made to demo basic frontend in pathahshala"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link href="/css/styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <div>
-    <form id="create_list" action="/api/items" method="post">
-      <div class="form-field-group">
-    <label>
-      Task Name:
-    </label>
-    <input name="title" type="text" placeholder="Enter title for the task">
-  </div>
-  <div class="form-field-group">
-    <label style="position: relative;top: -50px;">
-      Task description:
-      </label>
-      <textarea  name="description" rows="5" cols = "50" type="text" placeholder="Enter description of the task"></textarea>
-  </div>
-  <div class="form-field-group">
-    <button type="submit">
-      Add Task
-    </button>
-    <button type="reset">
-      Reset
-    </button>
-  </div>
-</form>
+  <div class="container">
+    <div class="row top_form">
+      <div class="col-lg-2 hidden-xs hidden-sm"></div>
+      <div class="col-lg-8 well">
+        <form id="create_list" action="/api/items" method="post">
+          <div class="form-group">
+        <label class="label label-primary">
+          Task Name:
+        </label>
+        <input class="form-control" name="title" type="text" placeholder="Enter title for the task">
+      </div>
+      <div class="form-group">
+        <label class="label label-primary">
+          Task description:
+          </label>
+          <textarea class="form-control"  name="description" rows="5" cols = "50" type="text" placeholder="Enter description of the task"></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">
+          <span class="glyphicon glyphicon-plus"></span>&nbsp;
+          Add Task
+        </button>
+        <button class="btn btn-danger" type="reset">
+          <span class="glyphicon glyphicon-erase"></span>&nbsp;
+          Reset
+        </button>
+      </div>
+    </form>
+      </div>
+      <div class="col-lg-2 hidden-xs hidden-sm"></div>
+    </div>
+
   </div>
 </body>
 </html>
